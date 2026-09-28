@@ -17,21 +17,22 @@
         <div class="left-main">
             <div class="left-main-genero">
                 <p>Gênero</p>
-                <input type="radio" id="todos" name="todos" value="todos" checked />
-                <label for="todos">Todos</label>
-                <div>
-                    <input type="radio" id="feminino" name="feminino" value="feminino" />
-                    <label for="feminono">feminino</label>
-                </div>
+                <form method="get" th:action="@{/}">
+                    <input type="radio" id="todos" name="todos" value="todos" checked />
+                    <label for="todos">Todos</label>
+                    <div>
+                        <input type="radio" id="feminino" name="feminino" value="feminino" />
+                        <label for="feminono">feminino</label>
+                    </div>
 
-                <div>
-                    <input type="radio" id="masculino" name="masculino" value="masculino" />
-                    <label for="masculino">masculino</label>
-                </div>
-                <div>
-                    <input type="radio" id="n-divulgavel" name="n-divulgavel" value="n-divulgavel" />
-                    <label for="n-divulgavel">não divulgável</label>
-                </div>
+                    <div>
+                        <input type="radio" id="masculino" name="masculino" value="masculino" />
+                        <label for="masculino">masculino</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="n-divulgavel" name="n-divulgavel" value="n-divulgavel" />
+                        <label for="n-divulgavel">não divulgável</label>
+                    </div>
             </div>
             <div class="left-main-escolaridade">
                 <p>Escolaridade</p>
@@ -46,14 +47,15 @@
                 </select>
             </div>
             <div class="left-main-faixaEtaria">
-                <input type="text" id="etaria1" name="etaria2" size="10"  />
+                <input type="number" name="idadeMin" th:value"${idadeMin}" size="10" />
                 <p>Até</p>
-                <input type="text" id="etaria2" name="etaria2" size="10"  />
+                <input type="number" name="idadeMax" th:value"${idadeMax}" size="10" />
             </div>
             <div class="left-main-buttons">
                 <button>Filtrar</button>
                 <button>Limpar</button>
             </div>
+            </form>
         </div>
     </div>
     </div>
